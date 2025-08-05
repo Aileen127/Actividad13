@@ -1,5 +1,4 @@
 estudiantes = {}
-
 while True:
     print("\nBienvenido al menú")
     print("1. Agregar estudiante")
@@ -17,10 +16,24 @@ while True:
                 id = int(input("Ingrese el id del estudiante: "))
                 nombre = str(input("Ingresa el nombre del estudiante: "))
                 carrera = str(input("Ingresa la carrera o programa académico del estudiante: "))
-                estudiantes[nombre] = {"Nombre:" : nombre,
+                estudiantes[id] = {"Nombre:" : nombre,
                                        "ID:" : id,
-                                       "Carrera:" : carrera}
-                for id in estudiantes:
-                    cursos = {}
+                                       "Carrera:" : carrera,
+                                       "Cursos:" : {}}
 
+        case 2:
             def agregar_cursos(curso, nota):
+                solicitud_id = int(input("Ingresa el ID del estudiante: "))
+                if solicitud_id in estudiantes:
+                    curso = str(input("Ingresa el nombre del curso: "))
+                    nota = int(input("Ingresa la nota final del estudiante: "))
+                    if nota >= 0 and nota <= 100:
+                        estudiantes[solicitud_id]["Cursos"][curso] = {"Curso: " : curso,
+                                         "Nota:" : nota}
+                    else:
+                        print("La nota debe de estar en el rango de 0 - 100")
+        def
+
+
+
+
